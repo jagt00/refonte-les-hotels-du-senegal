@@ -21,7 +21,7 @@ export default function Header({ onBook }: Props) {
         </nav>
 
         <Link to="/">
-          <img src="/images/logo-senegal-hotels.png" alt="Sénégal Hôtels" className="h-10 md:h-14 w-auto" />
+          <img src="/images/logo-senegal-hotels.png" alt="Sénégal Hôtels" className="h-10 md:h-14 w-auto brightness-0 invert" />
         </Link>
 
         <div className="flex items-center gap-4">
