@@ -5,6 +5,8 @@ import Footer from "./components/Footer";
 import BookingModal from "./components/BookingModal";
 import Home from "./pages/Home";
 import Hotels from "./pages/Hotels";
+import HotelDetail from "./pages/HotelDetail";
+import RoomDetail from "./pages/RoomDetail";
 import Booking from "./pages/Booking";
 
 export default function App() {
@@ -16,6 +18,8 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home onBook={() => setModalOpen(true)} />} />
           <Route path="/hotels" element={<Hotels />} />
+          <Route path="/hotels/:id" element={<HotelDetail />} />
+          <Route path="/chambres/:id" element={<RoomDetail />} />
           <Route path="/reserver" element={<Booking />} />
         </Routes>
       </main>

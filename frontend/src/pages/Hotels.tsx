@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { api, type Hotel } from "../lib/api";
 
 export default function Hotels() {
@@ -13,8 +14,8 @@ export default function Hotels() {
       <div className="grid md:grid-cols-3 gap-8">
         {hotels.map((h) => (
           <article key={h.id}>
-            <img src={h.image} alt={h.name} className="w-full h-72 object-cover mb-4" />
-            <h2 className="font-serif text-xl">{h.name}</h2>
+            <Link to={`/hotels/${h.id}`}><img src={h.image} alt={h.name} className="w-full h-72 object-cover mb-4 hover:opacity-90 transition" /></Link>
+            <Link to={`/hotels/${h.id}`}><h2 className="font-serif text-xl hover:text-sand transition">{h.name}</h2></Link>
             <p className="text-sand text-sm uppercase tracking-widest mb-2">{h.city} · {"★".repeat(h.stars)} · {h.rating}/5</p>
             <p className="text-gray-600 text-sm mb-3">{h.description}</p>
             <p className="text-ink text-sm">À partir de <strong>{h.price.toLocaleString("fr-FR")} FCFA</strong> / nuit</p>

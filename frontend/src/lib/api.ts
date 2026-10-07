@@ -25,6 +25,7 @@ export interface Room {
   price_fcfa: number;
   description: string;
   image: string;
+  amenities?: string[];
 }
 
 export interface ReservationPayload {

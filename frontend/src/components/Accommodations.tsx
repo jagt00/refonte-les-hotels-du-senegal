@@ -37,7 +37,7 @@ export default function Accommodations() {
               <li className="flex items-center gap-1"><Bed size={14} /> {room.beds}</li>
             </ul>
             <p className="text-gray-600 text-sm">{room.description}</p>
-            <Link to={`/reserver?room=${room.id}`} className="inline-block mt-3 border-b border-sand text-sand uppercase tracking-widest text-xs pb-1">
+            <Link to={`/chambres/${room.id}`} className="inline-block mt-3 border-b border-sand text-sand uppercase tracking-widest text-xs pb-1">
               En savoir plus
             </Link>
           </article>

@@ -17,6 +17,23 @@ def hotels():
     return jsonify(opera_client.list_hotels())
 
 
+@bp.get("/hotels/<hotel_id>")
+def hotel_detail(hotel_id):
+    hotel = next((h for h in opera_client.list_hotels() if h["id"] == hotel_id), None)
+    if hotel is None:
+        abort(404, description="Hôtel introuvable")
+    hotel["rooms"] = opera_client.list_rooms(hotel_id)
+    return jsonify(hotel)
+
+
+@bp.get("/rooms/<room_id>")
+def room_detail(room_id):
+    room = next((r for r in opera_client.list_rooms() if r["id"] == room_id), None)
+    if room is None:
+        abort(404, description="Chambre introuvable")
+    return jsonify(room)
+
+
 @bp.get("/rooms")
 def rooms():
     hotel_id = request.args.get("hotel_id")
