@@ -9,7 +9,7 @@ const slides = [
 export default function Hero({ onSearch }: { onSearch: () => void }) {
   const [i, setI] = useState(0);
   useEffect(() => {
-    const t = setInterval(() => setI((v) => (v + 1) % slides.length), 7000);
+    const t = setInterval(() => setI((v) => (v + 1) % slides.length), 12000);
     return () => clearInterval(t);
   }, []);
 
