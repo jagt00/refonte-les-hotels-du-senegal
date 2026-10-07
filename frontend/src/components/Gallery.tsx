@@ -1,4 +1,4 @@
-import useEmblaCarousel from "embla-carousel-react";
+﻿import useEmblaCarousel from "embla-carousel-react";
 
 const images = [
   { src: "/images/gallery/gallery-pool.jpg", alt: "Piscine" },
@@ -16,7 +16,7 @@ export default function Gallery() {
         <div className="flex gap-4">
           {images.map((img) => (
             <div key={img.src} className="flex-[0_0_80%] md:flex-[0_0_31%]">
-              <img src={img.src} alt={img.alt} className="w-full h-72 object-cover" />
+              <img src={img.src} alt={img.alt} className="w-full h-72 object-cover rounded-2xl" />
             </div>
           ))}
         </div>
@@ -27,3 +27,4 @@ export default function Gallery() {
     </section>
   );
 }
+

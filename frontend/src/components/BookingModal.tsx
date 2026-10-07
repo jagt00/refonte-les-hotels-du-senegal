@@ -1,4 +1,4 @@
-import { X } from "lucide-react";
+﻿import { X } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function BookingModal({ open, onClose }: { open: boolean; onClose: () => void }) {
@@ -13,7 +13,7 @@ export default function BookingModal({ open, onClose }: { open: boolean; onClose
           <label className="flex flex-col text-sm">Arrivée<input type="date" className="border-b border-gray-300 py-2" /></label>
           <label className="flex flex-col text-sm">Départ<input type="date" className="border-b border-gray-300 py-2" /></label>
           <label className="flex flex-col text-sm">Adultes<input type="number" min={1} defaultValue={1} className="border-b border-gray-300 py-2" /></label>
-          <Link to="/reserver" onClick={onClose} className="bg-ink text-white text-center py-3 uppercase tracking-widest text-sm mt-2 hover:bg-sand transition">
+          <Link to="/reserver" onClick={onClose} className="bg-sand text-white text-center py-3 uppercase tracking-widest text-sm mt-2 hover:brightness-110 transition">
             Continuer
           </Link>
         </form>
@@ -21,3 +21,4 @@ export default function BookingModal({ open, onClose }: { open: boolean; onClose
     </div>
   );
 }
+

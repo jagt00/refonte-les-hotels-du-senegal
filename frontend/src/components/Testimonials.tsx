@@ -1,6 +1,6 @@
-export default function Testimonials() {
+﻿export default function Testimonials() {
   return (
-    <section className="container mx-auto px-4 pb-20 text-center max-w-3xl">
+    <section className="container mx-auto px-4 pb-24 text-center max-w-3xl">
       <p className="text-sand uppercase tracking-[0.3em] text-sm mb-2">La voix de nos hôtes</p>
       <h4 className="font-serif text-2xl mb-8">Ils ont séjourné chez nous</h4>
       <blockquote>
@@ -12,3 +12,4 @@ export default function Testimonials() {
     </section>
   );
 }
+

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+﻿import { useEffect, useState } from "react";
 import ReservationBar from "./ReservationBar";
 
 const slides = [
@@ -28,7 +28,7 @@ export default function Hero({ onSearch }: { onSearch: () => void }) {
         <div className="relative container mx-auto px-4 text-center text-white pt-24">
           <h1 className="font-serif text-4xl md:text-6xl mb-4">{slides[i].title}</h1>
           <p className="text-lg md:text-xl mb-8">{slides[i].sub}</p>
-          <button onClick={onSearch} className="border border-white px-8 py-3 uppercase tracking-widest hover:bg-white hover:text-ink transition">
+          <button onClick={onSearch} className="bg-sand text-white px-8 py-3 uppercase tracking-widest hover:brightness-110 transition">
             Réserver votre séjour
           </button>
         </div>
@@ -43,3 +43,4 @@ export default function Hero({ onSearch }: { onSearch: () => void }) {
     </>
   );
 }
+

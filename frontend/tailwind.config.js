@@ -4,12 +4,14 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        serif: ["Marcellus", "serif"],
-        sans: ["Jost", "sans-serif"],
+        serif: ["'Cormorant Garamond'", "Georgia", "serif"],
+        sans: ["Inter", "system-ui", "sans-serif"],
       },
       colors: {
-        sand: "#c9a66b",
-        ink: "#2b2b28",
+        sand: "#f38525",
+        ink: "#1f2938",
+        tealbrand: "#2e829f",
+        creambrand: "#f7f3ec",
       },
     },
   },

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+﻿import { useEffect, useState } from "react";
 import { api, type Hotel, type ReservationPayload, type Room } from "../lib/api";
 
 export default function Booking() {
@@ -37,7 +37,7 @@ export default function Booking() {
   };
 
   return (
-    <section className="container mx-auto px-4 pt-32 pb-20 max-w-2xl">
+    <section className="container mx-auto px-4 pt-32 pb-24 max-w-2xl">
       <h1 className="font-serif text-4xl mb-8 text-center">Réserver</h1>
       {result && <p className="mb-6 p-4 bg-green-50 text-green-800">{result}</p>}
       {error && <p className="mb-6 p-4 bg-red-50 text-red-800">{error}</p>}
@@ -68,8 +68,10 @@ export default function Booking() {
             <option value="bictorys">Bictorys (à venir)</option>
           </select>
         </label>
-        <button className="bg-ink text-white py-3 uppercase tracking-widest text-sm hover:bg-sand transition">Confirmer la réservation</button>
+        <button className="bg-sand text-white py-3 uppercase tracking-widest text-sm hover:bg-sand transition">Confirmer la réservation</button>
       </form>
     </section>
   );
 }
+
+

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+﻿import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Bed, Expand, Users } from "lucide-react";
 import { api, type Room } from "../lib/api";
@@ -13,7 +13,7 @@ export default function RoomDetail() {
   if (!room) return <p className="pt-40 text-center text-gray-500">Chargement…</p>;
 
   return (
-    <section className="pt-24 pb-20">
+    <section className="pt-24 pb-24">
       <img src={room.image} alt={room.name} className="w-full h-[55vh] object-cover" />
       <div className="container mx-auto px-4 max-w-3xl mt-10">
         <p className="text-sand uppercase tracking-[0.3em] text-sm">Chambre</p>
@@ -37,10 +37,12 @@ export default function RoomDetail() {
         )}
 
         <p className="text-2xl font-serif mb-8">À partir de <strong>{room.price_fcfa.toLocaleString("fr-FR")} FCFA</strong> / nuit</p>
-        <Link to={`/reserver`} className="bg-ink text-white px-8 py-3 uppercase tracking-widest text-sm hover:bg-sand transition">
+        <Link to={`/reserver`} className="bg-sand text-white px-8 py-3 uppercase tracking-widest text-sm hover:bg-sand transition">
           Réserver cette chambre
         </Link>
       </div>
     </section>
   );
 }
+
+

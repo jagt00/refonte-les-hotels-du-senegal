@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+﻿import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Bed, Expand, User } from "lucide-react";
 import { api, type Room } from "../lib/api";
@@ -10,13 +10,13 @@ export default function Accommodations() {
   }, []);
 
   return (
-    <section id="hebergements" className="container mx-auto px-4 py-20">
+    <section id="hebergements" className="container mx-auto px-4 py-24">
       <div className="flex flex-col md:flex-row md:items-end justify-between mb-10">
         <div>
           <p className="text-sand uppercase tracking-[0.3em] text-sm mb-2">Profitez d'un séjour de classe mondiale</p>
           <h3 className="font-serif text-3xl md:text-4xl">Les Hébergements</h3>
         </div>
-        <Link to="/hotels" className="mt-4 md:mt-0 border border-ink px-6 py-2 uppercase tracking-widest text-sm hover:bg-ink hover:text-white transition self-start">
+        <Link to="/hotels" className="mt-4 md:mt-0 border border-tealbrand text-tealbrand px-6 py-2 uppercase tracking-widest text-sm hover:bg-tealbrand hover:text-white transition self-start">
           Découvrir toutes les suites
         </Link>
       </div>
@@ -25,7 +25,7 @@ export default function Accommodations() {
         {rooms.map((room) => (
           <article key={room.id}>
             <div className="relative overflow-hidden group">
-              <img src={room.image} alt={room.name} className="w-full h-72 object-cover transition duration-500 group-hover:scale-105" />
+              <img src={room.image} alt={room.name} className="w-full h-72 object-cover rounded-2xl shadow-lg transition duration-500 group-hover:scale-105" />
               <div className="absolute bottom-4 left-4 bg-white/90 px-3 py-1 text-sm">
                 À partir de {room.price_fcfa.toLocaleString("fr-FR")} FCFA
               </div>
@@ -46,3 +46,6 @@ export default function Accommodations() {
     </section>
   );
 }
+
+
+

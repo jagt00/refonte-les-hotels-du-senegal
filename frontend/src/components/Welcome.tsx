@@ -1,8 +1,8 @@
-import { Umbrella } from "lucide-react";
+﻿import { Umbrella } from "lucide-react";
 
 export default function Welcome() {
   return (
-    <section id="a-propos" className="container mx-auto px-4 py-20 text-center max-w-3xl">
+    <section id="a-propos" className="container mx-auto px-4 py-24 text-center max-w-3xl bg-creambrand">
       <Umbrella className="mx-auto text-sand mb-4" size={40} />
       <p className="text-sand uppercase tracking-[0.3em] text-sm mb-3">Bienvenue chez Les Hôtels du Sénégal</p>
       <h2 className="font-serif text-3xl md:text-4xl mb-6">Au cœur du littoral atlantique, des vues à couper le souffle</h2>
@@ -14,3 +14,5 @@ export default function Welcome() {
     </section>
   );
 }
+
+

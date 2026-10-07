@@ -1,4 +1,4 @@
-import { useState } from "react";
+﻿import { useState } from "react";
 
 export default function ReservationBar() {
   const [checkin, setCheckin] = useState("");
@@ -34,10 +34,11 @@ export default function ReservationBar() {
             enfants
           </span>
         </label>
-        <button type="submit" className="bg-ink text-white px-4 py-3 uppercase tracking-widest text-sm hover:bg-sand transition">
+        <button type="submit" className="bg-sand text-white px-4 py-3 uppercase tracking-widest text-sm hover:brightness-110 transition">
           Vérifier les disponibilités
         </button>
       </form>
     </section>
   );
 }
+

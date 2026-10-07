@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+﻿import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { api, type Hotel, type Room } from "../lib/api";
 
@@ -20,7 +20,7 @@ export default function HotelDetail() {
   if (!hotel) return <p className="pt-40 text-center text-gray-500">Chargement…</p>;
 
   return (
-    <section className="pt-24 pb-20">
+    <section className="pt-24 pb-24">
       <img src={hotel.image} alt={hotel.name} className="w-full h-[55vh] object-cover" />
       <div className="container mx-auto px-4 max-w-4xl mt-10">
         <p className="text-sand uppercase tracking-[0.3em] text-sm">{hotel.city} · {"★".repeat(hotel.stars)}</p>
@@ -37,7 +37,7 @@ export default function HotelDetail() {
           {hotel.rooms.map((room) => (
             <article key={room.id}>
               <Link to={`/chambres/${room.id}`}>
-                <img src={room.image} alt={room.name} className="w-full h-64 object-cover mb-4 hover:opacity-90 transition" />
+                <img src={room.image} alt={room.name} className="w-full h-64 object-cover mb-4 rounded-2xl shadow-lg hover:opacity-90 transition" />
               </Link>
               <h3 className="font-serif text-xl">{room.name}</h3>
               <p className="text-sm text-gray-500 my-2">
@@ -81,3 +81,5 @@ export default function HotelDetail() {
     </section>
   );
 }
+
+
