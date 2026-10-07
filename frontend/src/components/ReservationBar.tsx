@@ -8,7 +8,7 @@ export default function ReservationBar() {
   const [children, setChildren] = useState(0);
 
   return (
-    <section className="container mx-auto px-4 -mt-20 relative z-10">
+    <section className="container mx-auto px-0 relative z-10">
       <form
         className="bg-white shadow-xl rounded-sm p-4 md:p-6 grid grid-cols-2 md:grid-cols-5 gap-4 items-end"
         onSubmit={(e) => { e.preventDefault(); window.location.hash = "hebergements"; }}
