@@ -15,7 +15,7 @@ export default function Hero({ onSearch }: { onSearch: () => void }) {
 
   return (
     <>
-      <section id="accueil" className="relative min-h-[85vh] flex items-center">
+      <section id="accueil" className="relative h-screen min-h-[640px] flex items-center">
         {slides.map((s, idx) => (
           <video
             key={s.video}
