@@ -4,7 +4,7 @@ export default function ParallaxBanner() {
   return (
     <section
       className="parallax relative py-32"
-      style={{ backgroundImage: "url('https://images.unsplash.com/photo-1519046904884-53103b34b206?q=80&w=1600&auto=format&fit=crop')" }}
+      style={{ backgroundImage: "url('/images/dest-dakar.webp')" }}
     >
       <div className="absolute inset-0 bg-black/50" />
       <div className="relative container mx-auto px-4 text-center text-white max-w-2xl">

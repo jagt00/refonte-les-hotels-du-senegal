@@ -1,7 +1,7 @@
 const cards = [
-  { title: "Spa & Bien-être", text: "Lové dans une nature luxuriante, notre spa moderne incarne l'apaisement : soins, hammam, massages.", img: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=900&auto=format&fit=crop" },
-  { title: "Excursions & Découvertes", text: "Surf, plongée, pêche, voile, randonnées et villages à découvrir : un terrain de jeu pour aventuriers.", img: "https://images.unsplash.com/photo-1530521954074-e64f6810b32d?q=80&w=900&auto=format&fit=crop" },
-  { title: "Restaurants & Bars", text: "De la cuisine sénégalaise aux saveurs internationales, nos tables célèbrent le terroir et la mer.", img: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=900&auto=format&fit=crop" },
+  { title: "Spa & Bien-être", text: "Massages relaxants, hammam et soins du corps pour parfaire votre séjour détente.", img: "/images/exp-spa.jpg" },
+  { title: "Excursions & Découvertes", text: "Pirogues sur le Delta du Saloum, observation d'oiseaux, VTT et immersion culturelle diola.", img: "/images/exp-excursions.jpg" },
+  { title: "Restaurants & Bars", text: "Des spécialités locales sénégalaises à la cuisine internationale, dégustez face à la mer.", img: "/images/exp-gastronomie.jpg" },
 ];
 
 export default function CTAGrid() {

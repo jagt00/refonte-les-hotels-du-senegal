@@ -1,11 +1,11 @@
 import useEmblaCarousel from "embla-carousel-react";
 
 const images = [
-  { src: "https://images.unsplash.com/photo-1540541338287-41700207dee6?q=80&w=800&auto=format&fit=crop", alt: "Piscine et palmiers" },
-  { src: "https://images.unsplash.com/photo-1519046904884-53103b34b206?q=80&w=800&auto=format&fit=crop", alt: "Plage" },
-  { src: "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?q=80&w=800&auto=format&fit=crop", alt: "Spa" },
-  { src: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=800&auto=format&fit=crop", alt: "Restaurant" },
-  { src: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=800&auto=format&fit=crop", alt: "Mer" },
+  { src: "/images/gallery/gallery-pool.jpg", alt: "Piscine" },
+  { src: "/images/gallery/gallery-beach.jpg", alt: "Plage" },
+  { src: "/images/gallery/gallery-spa.jpg", alt: "Spa" },
+  { src: "/images/gallery/gallery-restaurant.jpg", alt: "Restaurant" },
+  { src: "/images/gallery/gallery-excursion.jpg", alt: "Excursion" },
 ];
 
 export default function Gallery() {

@@ -15,8 +15,14 @@ export default function Hotels() {
           <article key={h.id}>
             <img src={h.image} alt={h.name} className="w-full h-72 object-cover mb-4" />
             <h2 className="font-serif text-xl">{h.name}</h2>
-            <p className="text-sand text-sm uppercase tracking-widest mb-2">{h.city} · {"★".repeat(h.stars)}</p>
-            <p className="text-gray-600 text-sm">{h.description}</p>
+            <p className="text-sand text-sm uppercase tracking-widest mb-2">{h.city} · {"★".repeat(h.stars)} · {h.rating}/5</p>
+            <p className="text-gray-600 text-sm mb-3">{h.description}</p>
+            <p className="text-ink text-sm">À partir de <strong>{h.price.toLocaleString("fr-FR")} FCFA</strong> / nuit</p>
+            <div className="flex gap-2 mt-3 flex-wrap">
+              {h.tags.map((t) => (
+                <span key={t} className="text-xs border border-sand text-sand px-2 py-1">{t}</span>
+              ))}
+            </div>
           </article>
         ))}
       </div>

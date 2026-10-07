@@ -2,7 +2,7 @@ export default function Newsletter() {
   return (
     <section
       className="parallax relative py-24"
-      style={{ backgroundImage: "url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1600&auto=format&fit=crop')" }}
+      style={{ backgroundImage: "url('/images/dest-toubacouta.webp')" }}
     >
       <div className="absolute inset-0 bg-black/50" />
       <div className="relative container mx-auto px-4 text-center text-white max-w-xl">

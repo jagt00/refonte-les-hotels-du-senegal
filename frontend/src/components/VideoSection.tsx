@@ -5,7 +5,7 @@ export default function VideoSection() {
   return (
     <section
       className="parallax relative py-32"
-      style={{ backgroundImage: "url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=1600&auto=format&fit=crop')" }}
+      style={{ backgroundImage: "url('/images/exp-spa.jpg')" }}
     >
       <div className="absolute inset-0 bg-black/45" />
       <div className="relative flex justify-center">

@@ -10,6 +10,9 @@ export interface Hotel {
   stars: number;
   description: string;
   image: string;
+  price: number;
+  rating: number;
+  tags: string[];
 }
 
 export interface Room {
