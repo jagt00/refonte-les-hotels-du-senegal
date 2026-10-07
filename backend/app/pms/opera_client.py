@@ -33,6 +33,15 @@ def list_rooms(hotel_id: str | None = None) -> list[dict]:
     return rooms
 
 
+def list_services(hotel_id: str | None = None) -> list[dict]:
+    if _mode() == "opera":
+        return _get(f"/hotels/{hotel_id}/services" if hotel_id else "/services")
+    services = getattr(mock_data, "SERVICES", [])
+    if hotel_id:
+        services = [s for s in services if s["hotel_id"] == hotel_id]
+    return services
+
+
 def get_availability(room_id: str, start: date, end: date) -> dict:
     """Retourne la disponibilité nuit par nuit d'une chambre."""
     if _mode() == "opera":

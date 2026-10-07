@@ -20,7 +20,7 @@ export default function VideoSection() {
       {open && (
         <div className="fixed inset-0 bg-black/80 z-[60] flex items-center justify-center p-4" onClick={() => setOpen(false)}>
           <div className="w-full max-w-3xl aspect-video">
-            <iframe className="w-full h-full" src="https://www.youtube.com/embed/XHOmBV4js_E?autoplay=1" title="Vidéo" allow="autoplay; encrypted-media" allowFullScreen />
+            <video className="w-full h-full" src="/videos/hero.mp4" controls autoPlay />
           </div>
         </div>
       )}

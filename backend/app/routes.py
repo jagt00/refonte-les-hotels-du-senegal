@@ -17,6 +17,12 @@ def hotels():
     return jsonify(opera_client.list_hotels())
 
 
+@bp.get("/services")
+def services():
+    hotel_id = request.args.get("hotel_id")
+    return jsonify(opera_client.list_services(hotel_id))
+
+
 @bp.get("/hotels/<hotel_id>")
 def hotel_detail(hotel_id):
     hotel = next((h for h in opera_client.list_hotels() if h["id"] == hotel_id), None)

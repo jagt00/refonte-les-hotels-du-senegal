@@ -13,6 +13,7 @@ export interface Hotel {
   price: number;
   rating: number;
   tags: string[];
+  gallery?: string[];
 }
 
 export interface Room {

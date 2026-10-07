@@ -2,13 +2,19 @@ import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { api, type Hotel, type Room } from "../lib/api";
 
-interface HotelWithRooms extends Hotel { rooms: Room[] }
+interface HotelWithRooms extends Hotel {
+  rooms: Room[];
+  services?: { id: string; name: string; type: string; description: string; hours: string }[];
+}
 
 export default function HotelDetail() {
   const { id } = useParams();
   const [hotel, setHotel] = useState<HotelWithRooms | null>(null);
   useEffect(() => {
-    api.get<HotelWithRooms>(`/hotels/${id}`).then((r) => setHotel(r.data)).catch(() => setHotel(null));
+    api.get<HotelWithRooms>(`/hotels/${id}`).then(async (r) => {
+      const s = await api.get(`/services?hotel_id=${id}`);
+      setHotel({ ...r.data, services: s.data });
+    }).catch(() => setHotel(null));
   }, [id]);
 
   if (!hotel) return <p className="pt-40 text-center text-gray-500">Chargement…</p>;
@@ -27,7 +33,7 @@ export default function HotelDetail() {
         </div>
 
         <h2 className="font-serif text-3xl mb-8">Chambres & Suites</h2>
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-8 mb-16">
           {hotel.rooms.map((room) => (
             <article key={room.id}>
               <Link to={`/chambres/${room.id}`}>
@@ -45,6 +51,32 @@ export default function HotelDetail() {
             </article>
           ))}
         </div>
+
+        {hotel.gallery && hotel.gallery.length > 1 && (
+          <>
+            <h2 className="font-serif text-3xl mb-8">Galerie</h2>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mb-16">
+              {hotel.gallery.map((g) => (
+                <img key={g} src={g} alt={hotel.name} className="w-full h-40 object-cover" loading="lazy" />
+              ))}
+            </div>
+          </>
+        )}
+
+        {hotel.services && hotel.services.length > 0 && (
+          <>
+            <h2 className="font-serif text-3xl mb-8">Services & Équipements</h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              {hotel.services.map((s) => (
+                <div key={s.id} className="border-b border-gray-200 pb-4">
+                  <h3 className="font-serif text-lg">{s.name}</h3>
+                  <p className="text-gray-600 text-sm">{s.description}</p>
+                  {s.hours && <p className="text-sand text-xs mt-1 uppercase tracking-widest">{s.hours}</p>}
+                </div>
+              ))}
+            </div>
+          </>
+        )}
       </div>
     </section>
   );
