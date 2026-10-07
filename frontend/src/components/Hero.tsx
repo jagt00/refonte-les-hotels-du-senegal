@@ -2,9 +2,8 @@
 import ReservationBar from "./ReservationBar";
 
 const slides = [
-  { img: "/images/hero-senegal-new.webp", title: "Trois hôtels d'exception au Sénégal", sub: "Du littoral de Saly au Delta du Saloum, jusqu'aux plages sauvages de Casamance" },
-  { img: "/images/hero-senegal.webp", title: "L'art de vivre sénégalais", sub: "Hospitalité, sérénité et raffinement sur la Petite Côte" },
-  { img: "/images/hero-resort.webp", title: "Un séjour tout inclus de luxe", sub: "Piscines, spa, excursions et gastronomie locale" },
+  { video: "/videos/hero.mp4", title: "Trois hôtels d'exception au Sénégal", sub: "Du littoral de Saly au Delta du Saloum, jusqu'aux plages sauvages de Casamance" },
+  { video: "/videos/hero-2.mp4", title: "L'art de vivre sénégalais", sub: "Hospitalité, sérénité et raffinement sur la Petite Côte" },
 ];
 
 export default function Hero({ onSearch }: { onSearch: () => void }) {
@@ -18,10 +17,14 @@ export default function Hero({ onSearch }: { onSearch: () => void }) {
     <>
       <section id="accueil" className="relative min-h-[85vh] flex items-center">
         {slides.map((s, idx) => (
-          <div
-            key={s.img}
-            className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ${idx === i ? "opacity-100" : "opacity-0"}`}
-            style={{ backgroundImage: `url('${s.img}')` }}
+          <video
+            key={s.video}
+            src={s.video}
+            autoPlay
+            muted
+            loop
+            playsInline
+            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${idx === i ? "opacity-100" : "opacity-0"}`}
           />
         ))}
         <div className="absolute inset-0 bg-black/45" />
