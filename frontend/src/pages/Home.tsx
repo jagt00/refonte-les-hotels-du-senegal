@@ -8,10 +8,10 @@ import CTAGrid from "../components/CTAGrid";
 import Testimonials from "../components/Testimonials";
 import Newsletter from "../components/Newsletter";
 
-export default function Home({ onBook }: { onBook: () => void }) {
+export default function Home() {
   return (
     <>
-      <Hero onSearch={onBook} />
+      <Hero />
       <Welcome />
       <Gallery />
       <VideoSection />

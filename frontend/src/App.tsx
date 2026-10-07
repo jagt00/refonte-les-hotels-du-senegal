@@ -16,7 +16,7 @@ export default function App() {
       <Header onBook={() => setModalOpen(true)} />
       <main>
         <Routes>
-          <Route path="/" element={<Home onBook={() => setModalOpen(true)} />} />
+          <Route path="/" element={<Home />} />
           <Route path="/hotels" element={<Hotels />} />
           <Route path="/hotels/:id" element={<HotelDetail />} />
           <Route path="/chambres/:id" element={<RoomDetail />} />

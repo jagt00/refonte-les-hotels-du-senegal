@@ -6,7 +6,7 @@ const slides = [
   { video: "/videos/hero-2.mp4", title: "L'art de vivre sénégalais", sub: "Hospitalité, sérénité et raffinement sur la Petite Côte" },
 ];
 
-export default function Hero({ onSearch }: { onSearch: () => void }) {
+export default function Hero() {
   const [i, setI] = useState(0);
   useEffect(() => {
     const t = setInterval(() => setI((v) => (v + 1) % slides.length), 12000);
